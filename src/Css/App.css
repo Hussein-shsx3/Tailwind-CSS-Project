@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  *{
+    scroll-behavior: smooth;
+  }
+  .nav {
+    @apply relative text-white opacity-[0.9] hover:opacity-[1]
+  }
+
+  .nav::after {
+    @apply content-[""] bg-buttonColor rounded-[2px] h-[2px] w-[0%] hover:w-[100%] left-0 bottom-[-2px] absolute transition-all duration-200
+  }
+
+  .hover-effect:hover i {
+    @apply translate-x-[5px] transition-all duration-500
+  }
+
+  .hover-effect:hover hr {
+    @apply w-[165px] transition-all duration-500
+  }
+
+  .icon {
+    @apply rounded-[100%] text-hColor text-[17px] w-[28px] h-[28px] border-[2px] border-white flex justify-center items-center cursor-pointer hover:text-[#0c1524] hover:bg-white transition-all duration-[0.3s]
+  }
+
+  .link {
+    @apply hover:text-hColor transition-all duration-[0.3s] mb-[5px]
+  }
+}
